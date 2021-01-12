@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body class="background">
+        <div class="calculator">
+            <form onsubmit="return formSubmission();">
+                <label for="contactDate">Contact date:</label>
+                <input type="date" id="contactDate" name="contactDate" required/><br><br>
+                <label for="symptomsDate">Symptoms date:</label>
+                <input type="date" id="symptomsDate" name="symptomsDate" required/><br><br>
+                <label for="testDate">Test date:</label>
+                <input type="date" id="testDate" name="testDate" required/><br><br>
+                <label for="incubationPeriod">Incubation period (1-10 days):</label>
+                <input type="number" id="incubationPeriod" name="incubationPeriod" min="1" max="10" value="10" required/><br><br>
+                <label for="dayWeInfect">First day we infect (1-10 days):</label>
+                <input type="number" id="dayWeInfect" name="dayWeInfect" min="1" max="10" value="1" required/><br><br>
+                <label for="quarantineTime">Quarantine time (10-14 days):</label>
+                <input type="number" id="quarantineTime" name="quarantineTime" min="10" max="14" value="14" required/><br><br>
+                <div>
+                    <button onclick="check_btn_clicked()" type="submit">Check infection</button>
+                    <button id="reportButton" onclick="report_btn_clicked()" type="submit" disabled="true">Show report</button>
+                </div>
+                <p id="result"></p>
+            </form>
+        </div>
+    </body>
+
+    <script src="./calculator.js"></script>
+
+</html>
